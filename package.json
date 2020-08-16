@@ -1,0 +1,60 @@
+{
+  "name": "kora-patcher",
+  "version": "0.0.1",
+  "private": true,
+  "watch": {
+    "rq:build:osx:dev": "src"
+  },
+  "scripts": {
+    "nodemon:osx": "nodemon ./scripts/build.osx.dev.js -w src -e \"js ts tsx qml\"",
+    "rq:start:osx:dev": "rq start --dev --platform=osx",
+    "rq:start:ios:dev": "rq start --dev --platform=ios",
+    "rq:start:android:dev": "rq start --dev --platform=android",
+    "rq:start:web:dev": "rq start --dev --platform=web",
+    "rq:start:osx:prod": "rq start --dev false --platform=osx",
+    "rq:start:ios:prod": "rq start --dev false --platform=ios",
+    "rq:start:android:prod": "rq start --dev false --platform=android",
+    "rq:start:web:prod": "rq start --dev false --platform=web",
+    "rq:build:osx:prod": "NODE_ENV=production rq bundle --platform=osx",
+    "rq:build:ios:prod": "NODE_ENV=production rq bundle --platform=ios",
+    "rq:build:android:prod": "NODE_ENV=production rq bundle --platform=android",
+    "rq:build:web:prod": "NODE_ENV=production rq bundle --platform=web",
+    "rq:build:osx:dev": "rq bundle --dev=true --platform=osx",
+    "rq:build:ios:dev": "rq bundle --dev=true --platform=ios",
+    "rq:build:android:dev": "rq bundle --dev=true --platform=android",
+    "rq:build:web:dev": "rq bundle --dev=true --platform=web",
+    "rq:bundle:help": "rq bundle --help",
+    "nodemon:help": "nodemon --help",
+    "redux-devtools": "redux-devtools --hostname=localhost --port=8000 --protocol=http --open",
+    "watch": "npm-watch"
+  },
+  "dependencies": {
+    "connected-react-router": "^4.3.0",
+    "history": "^4.7.2",
+    "react": "^16.9.0",
+    "react-qml": "^0.4.6",
+    "react-redux": "5.0.6",
+    "react-router": "^4.3.1",
+    "redux": "4",
+    "redux-observable": "^0.17.0",
+    "redux-thunk": "^2.3.0",
+    "remote-redux-devtools": "^0.5.16"
+  },
+  "devDependencies": {
+    "@react-qml/cli": "^0.1.7",
+    "@types/history": "^4.7.2",
+    "@types/node": "^11.10.5",
+    "@types/react": "^16.8.7",
+    "@types/react-redux": "^7.0.2",
+    "@types/remote-redux-devtools": "^0.5.3",
+    "@types/webpack": "^4.4.25",
+    "@types/webpack-env": "^1.13.8",
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.13.1",
+    "eslint-plugin-react": "^7.5.1",
+    "nodemon": "^2.0.4",
+    "npm-watch": "^0.7.0",
+    "shelljs": "^0.8.4",
+    "typescript": "^3.6.3"
+  }
+}
